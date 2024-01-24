@@ -3,34 +3,28 @@
 set -e
 
 # Variables
-storePath=~/Documents/configFiles
+storePath=~/Documents/Config-Files
 
 # Home directory
 cd ~
 cp .bashrc $storePath
 cp .vimrc $storePath
 
-# neovim testing config from neovim kickstart https://github.com/nvim-lua/kickstart.nvim
-#cd ~/.config/nvim
-#cp init.lua $storePath/nvimConfig 
+## swaywm
+#cd ~/.config/sway
+#cp config $storePath/config.sway
 
-# swaywm
-cd ~/.config/sway
-cp config $storePath/config.sway
-
-# waybar
-cd ~/.config/waybar
-cp config $storePath/config.waybar
-cp style.css $storePath/style.css.waybar
+## waybar
+#cd ~/.config/waybar
+#cp config $storePath/config.waybar
+#cp style.css $storePath/style.css.waybar
 
 # alacritty
-#cd ~/.config/alacritty
-#cp alacritty.yml $storePath/
+cd ~/.config/alacritty
+cp alacritty.toml $storePath
 
-#if $1
-#then
-# cd ~/Documents/.scripts/ConfigFiles/
-# git add $1 $2 $3 $4 $5
-# git commit
-# git push
-#fi
+# i3 configs
+cd ~/.config/i3/
+cp config $storePath
+cp picom.conf $storePath
+cp i3status.conf $storePath
